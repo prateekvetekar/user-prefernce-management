@@ -12,12 +12,15 @@ const app = express();
 
 // Connect to database
 connectDB();
-app.use(
-  cors({
-    origin: "https://user-prefernce-management.vercel.app", // Replace with your frontend URL
-    credentials: true, // Allow credentials (cookies) to be sent
-  })
-);
+const corsOptions = {
+  origin: "https://user-prefernce-management.vercel.app",
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
