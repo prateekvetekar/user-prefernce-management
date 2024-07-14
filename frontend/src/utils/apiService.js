@@ -1,4 +1,3 @@
-// src/apiService.js
 import axiosInstance from "./axiosInstance";
 
 export const checkAuth = async () => {

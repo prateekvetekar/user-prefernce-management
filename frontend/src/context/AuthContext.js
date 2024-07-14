@@ -1,4 +1,3 @@
-// src/context/AuthContext.js
 import React, { createContext, useState, useEffect } from "react";
 import {
   login as loginUser,
@@ -6,7 +5,7 @@ import {
   checkAuth as checkAuthentication,
   updatePreference as updateColorPreference,
 } from "../utils/apiService";
-import axiosInstance from "../utils/axiosInstance"; // Import your axios instance
+import axiosInstance from "../utils/axiosInstance"; 
 
 const AuthContext = createContext();
 

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import "./App.css";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
@@ -36,7 +35,6 @@ function App() {
           <Alert severity="error">{error}</Alert>
         </Stack>
       )}{" "}
-      {/* Global error display */}
       <Routes>
         <Route path="/" exact element={<ProtectedRoute element={<Home />} />} />
         <Route path="/login" element={<Login />} />

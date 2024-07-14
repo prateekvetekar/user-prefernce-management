@@ -8,7 +8,6 @@ dotenv.config();
 
 const router = express.Router();
 
-// Register user
 router.post("/register", async (req, res) => {
   const { firstname, lastname, username, password } = req.body;
 
@@ -38,7 +37,6 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Login user
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -91,7 +89,6 @@ router.post("/logout", (req, res) => {
   res.status(200).send("Cookie cleared");
 });
 
-// src/routes/auth.js
 router.get("/check", (req, res) => {
   const token = req.cookies.token;
   console.log("token", token);

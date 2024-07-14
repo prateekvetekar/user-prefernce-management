@@ -38,22 +38,22 @@ export default function Header() {
       border: "1px solid black",
       marginTop: theme.spacing(1),
       minWidth: 180,
-      backgroundColor: "#fff", // Set background color to white
-      color: "#000", // Set text color to black
+      backgroundColor: "#fff",
+      color: "#000",
       boxShadow:
         "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
       "& .MuiMenu-list": {
         padding: "4px 0",
       },
       "& .MuiMenuItem-root": {
-        fontSize: ".875rem", // Set font size
-        fontWeight: 600, // Set font weight
-        lineHeight: "1.25rem", // Set line height
-        fontFamily: "Inter, sans-serif", // Set font family
-        textTransform: "uppercase", // Set text transform
+        fontSize: ".875rem",
+        fontWeight: 600,
+        lineHeight: "1.25rem",
+        fontFamily: "Inter, sans-serif",
+        textTransform: "uppercase",
         "& .MuiSvgIcon-root": {
           fontSize: 18,
-          color: theme.palette.text.secondary, // Correct color
+          color: theme.palette.text.secondary,
           marginRight: theme.spacing(1.5),
         },
         "&:active": {
@@ -85,12 +85,9 @@ export default function Header() {
 
   const handleColorChange = async (color) => {
     try {
-      // console.log(color)
-      await updatePreference(color.colorPreference); // Call updateColorPreference with new color preference
-      // Optionally handle success feedback or state update
+      await updatePreference(color.colorPreference);
     } catch (error) {
       console.error("Error updating color preference:", error);
-      // Optionally handle error feedback
     }
     handleMenuClose();
   };

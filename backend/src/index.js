@@ -10,7 +10,6 @@ dotenv.config();
 
 const app = express();
 
-// Connect to database
 connectDB();
 const corsOptions = {
   origin: "https://user-prefernce-management.vercel.app",
@@ -21,11 +20,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
-// Middleware
 app.use(express.json());
 app.use(cookieParser());
 
-// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 

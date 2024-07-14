@@ -7,7 +7,6 @@ dotenv.config();
 
 const router = express.Router();
 
-// Middleware to verify token
 const auth = (req, res, next) => {
   const token = req.cookies.token;
 
@@ -25,7 +24,6 @@ const auth = (req, res, next) => {
 };
 
 
-// Update color preference
 router.put("/preference", auth, async (req, res) => {
   const { colorPreference } = req.body;
 
