@@ -82,7 +82,12 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/logout", (req, res) => {
-  res.cookie("token", "", { expires: new Date(0), httpOnly: true });
+  res.cookie("token", "", {
+    expires: new Date(0),
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+  });
   res.status(200).send("Cookie cleared");
 });
 
