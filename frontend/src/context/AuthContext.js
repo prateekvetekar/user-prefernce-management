@@ -5,7 +5,7 @@ import {
   checkAuth as checkAuthentication,
   updatePreference as updateColorPreference,
 } from "../utils/apiService";
-import axiosInstance from "../utils/axiosInstance"; 
+import axiosInstance from "../utils/axiosInstance";
 
 const AuthContext = createContext();
 
@@ -32,6 +32,9 @@ export const AuthProvider = ({ children }) => {
   const handleError = (error) => {
     console.error(error);
     setError(error || "Something went wrong");
+    setTimeout(() => {
+      setError(null);
+    }, 5000);
   };
   const checkAuthenticationStatus = async () => {
     try {

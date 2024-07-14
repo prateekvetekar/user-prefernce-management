@@ -31,7 +31,10 @@ function App() {
   return (
     <div>
       {error && (
-        <Stack sx={{ position: "absolute",width: "100%" }} spacing={2}>
+        <Stack
+          sx={{ position: "absolute", width: "100%", zIndex: 1 }}
+          spacing={2}
+        >
           <Alert severity="error">{error}</Alert>
         </Stack>
       )}{" "}
