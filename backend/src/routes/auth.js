@@ -69,7 +69,7 @@ router.post("/login", async (req, res) => {
         if (err) throw err;
         res.cookie("token", token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === "production",
+          // secure: process.env.NODE_ENV === "production",
         });
         res.json({ msg: "Logged in", colorPreference: user.colorPreference });
       }
