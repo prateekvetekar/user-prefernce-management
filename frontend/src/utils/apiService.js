@@ -49,5 +49,3 @@ export const updatePreference = async (colorPreference) => {
     throw error;
   }
 };
-
-// Add more API methods as needed
