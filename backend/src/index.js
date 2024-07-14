@@ -14,7 +14,7 @@ const app = express();
 connectDB();
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL, // Replace with your frontend URL
+    origin: "https://user-prefernce-management.vercel.app", // Replace with your frontend URL
     credentials: true, // Allow credentials (cookies) to be sent
   })
 );
